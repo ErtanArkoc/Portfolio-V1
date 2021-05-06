@@ -1,2 +1,2 @@
-# Portfolio-V1
+# ertanarkoc.github.io
 This is the first portfolio attempt.
