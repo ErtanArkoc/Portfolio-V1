@@ -1,14 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bangers&display=swap');
+:root {
+  --main-yellow: rgb(255, 255, 0);
+  --shade-yellow: rgb(255, 150, 0);
+  --main-blue: rgb(188, 188, 255);
+  --shade-blue: rgb(109, 109, 255);
+  --main-red: rgb(255, 187, 187);
+  --shade-red: rgb(255, 87, 87);
+  --main-green: rgb(185, 255, 185);
+  --shade-green: rgb(66, 168, 66);
+  --main-cyan: rgb(214, 255, 250);
+  --shade-cyan: rgb(74, 253, 253);
+}
 
 @media screen and (min-width: 1024px) {
-  .panel {
+  .panel, #p2a, #p2b, #p3a, #p3b {
     filter: grayscale(75%);
     transition: 0.2s;
   }
-  
-  .panel:hover {
+  .panel:hover  {
     filter: grayscale(0%);
     transform: scale(1.01);
+    opacity: 100%;
+  }
+
+  #design:hover {
+    filter: grayscale(0%);
+    transform: scale(1.01);
+    opacity: 100%;
+  }
+  #p2a:hover {
+    filter: grayscale(0%);
+    transform: scale(1.01);
+    opacity: 100%;
+  }
+  #p2b:hover  {
+    filter: grayscale(0%);
+    transform: scale(1.01);
+    opacity: 100%;
+  }
+  #p3a:hover  {
+    filter: grayscale(0%);
+    transform: scale(1.01);
+    opacity: 100%;
+  }
+  #p3b:hover  {
+    filter: grayscale(0%);
+    transform: scale(1.01);
+    opacity: 100%;
+  }
+  .panel:hover .in-panel-text{
+    opacity: 100%;
+    transform: scale(1.2);
+  }
+  .in-panel-text {
+    opacity: 0%;
+    transition: 0.2s;
   }
 }
 
@@ -39,7 +84,37 @@ body {
   cursor: pointer;
 }
 
+.panel-split {
+  padding-top: 2px;
+  display: flex;
+  flex-direction: column;
+  height: 48vh;
+  margin: 5px;
+  flex: 1 1 300px;
+  font-family: "bangers";
+  font-size: 1.3em;
+}
 
+.panel1 {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 5px;
+  flex: 1 1 300px;
+  font-family: "bangers";
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.panel2 {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 5px;
+  flex: 1 1 300px;
+  font-family: "bangers";
+  cursor: pointer;
+}
 
 .top-left {
   background-color: white;
@@ -51,6 +126,13 @@ body {
   display: block;
   align-self: flex-start;
 
+}
+
+.in-panel-text {
+  align-self: center;
+  text-align: center;
+  font-family: Architects Daughter;
+  font-size: 0.8em;
 }
 
 .bottom-right {
@@ -75,41 +157,78 @@ body {
 }
 
 #p2 {
+  margin: 5px;
+  border: none;
+}
+
+#p2a {
+  align-content: center;
+  margin: -2px;
+  margin-bottom: 5px;
   flex-basis: 300px;
-  background: radial-gradient(rgb(185, 255, 185), rgb(66, 168, 66))
+  background: radial-gradient(var(--main-green), var(--shade-green));
+}
+
+#p2b {
+  justify-content: flex-end;
+  margin: -2px;
+  margin-top: 5px;
+  flex-basis: 250px;
+  background: radial-gradient(var(--main-red), var(--shade-red));
 }
 
 #p3 {
-  flex-basis: 225px;
-  background: radial-gradient(rgb(188, 188, 255), rgb(109, 109, 255))
+  margin: 5px;
+  border: none;
+}
+
+#p3a {
+  margin: -2px;
+  margin-bottom: 5px;
+  flex-basis: 250px;
+  background: radial-gradient(var(--main-blue), var(--shade-blue));
+}
+
+#p3b {
+  justify-content: flex-end;
+  margin: -2px;
+  margin-top: 5px;
+  flex-basis: 300px;
+  background: radial-gradient(var(--main-yellow), var(--shade-yellow));
 }
 
 #p4 {
   flex-basis: 300px;
-  background: radial-gradient(rgb(255, 187, 187), rgb(255, 87, 87))
+  background: radial-gradient(var(--main-red), var(--shade-red))
 }
 
 #p5 {
   flex-basis: 250px;
-  background: radial-gradient(rgb(214, 255, 250), rgb(74, 253, 253))
+  background: radial-gradient(var(--main-green), var(--shade-green))
 }
 
 #p6 {
   flex-basis: 325px;
-  background: radial-gradient(rgb(255, 255, 0), rgb(255, 150, 0))
+  background: radial-gradient(var(--main-cyan), var(--shade-cyan))
 }
 
 #p7 {
   flex-basis: 275px;
-  background: radial-gradient(rgb(188, 188, 255), rgb(109, 109, 255))
+  background: radial-gradient(var(--main-blue), var(--shade-blue))
 }
 
 #p8 {
   flex-basis: 400px;
-  background: radial-gradient(rgb(185, 255, 185), rgb(66, 168, 66))
+  background: radial-gradient(var(--main-green), var(--shade-green))
 }
 
 #p9 {
   flex-basis: 400px;
-  background: radial-gradient(rgb(255, 187, 187), rgb(255, 87, 87))
+  background: radial-gradient(var(--main-red), var(--shade-red))
+}
+
+#design {
+  width: 50%;
+  opacity: 0%;
+  transition: 0.2s;
 }
