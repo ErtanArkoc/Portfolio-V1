@@ -65,7 +65,6 @@ body {
   padding: 0;
   user-select: none;
   cursor: pointer;
-
 }
 
 
@@ -150,7 +149,6 @@ body {
   align-self: flex-end;
 }
 
-
 #p1 {
   display: flex;
   flex-direction: column;
@@ -230,11 +228,51 @@ body {
   flex-basis: 400px;
   background: radial-gradient(var(--main-red), var(--shade-red));
   transform: scale(1);
-
 }
 
-#design {
-  width: 50%;
-  opacity: 0%;
-  transition: 0.2s;
+#anim1 {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  opacity: 0;
 }
+
+#anim1:active {
+  opacity: 100;
+  transition: 1s;
+  stroke-dasharray: 300px;
+  stroke-dashoffset: 300px;
+  animation: p2-anim 4s ease forwards;
+}
+
+@keyframes p2-anim {
+  to {
+      stroke-dashoffset: 0;
+  }
+}
+
+#logo path:nth-child(1) {
+  fill: rgb(255, 191, 72);
+}
+
+#logo path:nth-child(2) {
+  fill: rgb(28, 198, 255);
+}
+
+#logo path:nth-child(3) {
+  fill: rgb(255, 116, 220);
+}
+
+#logo path:nth-child(4) {
+  fill: rgb(247, 0, 255);
+}
+
+#logo path:nth-child(5) {
+  fill: rgb(255, 136, 0);
+}
+
+#logo path:nth-child(6) {
+  fill: rgb(68, 0, 255);
+}
+
